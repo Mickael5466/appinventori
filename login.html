@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #00c853;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Bienvenido a ExploraBot</h2>
+  <input type="text" id="usuario" placeholder="Nombre de usuario" />
+  <input type="password" id="clave" placeholder="Contraseña" />
+  <button onclick="login()">Entrar</button>
+<h1 style="color: blue; text-align: center;">¡Hola Michael!</h1>
+
+
+  <script>
+    function login() {
+      const user = document.getElementById("usuario").value;
+      const pass = document.getElementById("clave").value;
+
+      if (user === "michael" && pass === "1234") {
+        window.AppInventor.setWebViewString("acceso_permitido");
+      } else {
+        alert("Usuario o clave incorrectos");
+      }
+    }
+  </script>
+</body>
+</html>
